@@ -1,0 +1,21 @@
+@import "./fonts";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $poppins;
+}
+
+html {
+  font-size: 100% !important;
+}
+
+body {
+  overflow-x: hidden;
+  height: 100%;
+  background: #0a192f;
+}
+
+.App {
+}

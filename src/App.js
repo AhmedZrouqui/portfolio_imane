@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import "./assets/css/global.css";
+import Header from "./components/header/Header";
+import { Container } from "./components/partials/Container";
+import { Social, SocialItem, SocialLink } from "./components/sticky/Social";
+import { _social } from "./components/sticky/data/_social";
 
 function App() {
+  const displaySocial = () => {
+    return _social.map((item, index) => (
+      <SocialItem>
+        <SocialLink>{item.logo}</SocialLink>
+      </SocialItem>
+    ));
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Container display="block">
+        <Header />
+        <Social>{displaySocial()}</Social>
+      </Container>
+    </>
   );
 }
 

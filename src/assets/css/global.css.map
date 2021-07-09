@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACAA,OAAO,CAAC,oOAAI;ADEZ,AAAA,CAAC,CAAC;EACA,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,UAAU,EAAE,UAAU;EACtB,WAAW,ECHH,SAAS,EAAE,UAAU;CDI9B;;AAED,AAAA,IAAI,CAAC;EACH,SAAS,EAAE,eAAe;CAC3B;;AAED,AAAA,IAAI,CAAC;EACH,UAAU,EAAE,MAAM;EAClB,MAAM,EAAE,IAAI;EACZ,UAAU,EAAE,OAAO;CACpB",
+    "sources": [
+        "global.scss",
+        "_fonts.scss"
+    ],
+    "names": [],
+    "file": "global.css"
+}
