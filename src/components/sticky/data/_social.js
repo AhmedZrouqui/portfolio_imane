@@ -23,14 +23,9 @@ export const _social = [
     logo: <IoLogoLinkedin />,
     link: "https://linkedin.com",
   },
+
   {
     id: "4",
-    social: "dribble",
-    logo: <IoLogoDribbble />,
-    link: "https://dribble.com",
-  },
-  {
-    id: "5",
     social: "behance",
     logo: <IoLogoBehance />,
     link: "https://www.behance.net/imane_sihi",
