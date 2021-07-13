@@ -1,4 +1,5 @@
 @import "./fonts";
+@import "./locomotive";
 
 * {
   margin: 0;
@@ -9,13 +10,60 @@
 
 html {
   font-size: 100% !important;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  scrollbar-color: #a7a7a7 #0a192f;
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    background: #0a192f;
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #a7a7a7;
+    border-radius: 4px;
+  }
 }
 
 body {
-  overflow-x: hidden;
   height: 100%;
   background: #0a192f;
 }
 
-.App {
+.navLink {
+  text-decoration: none;
+  text-transform: capitalize;
+  font-family: "Fira Code", monospace;
+  color: #f3f3f3;
+  transition: 0.4s all ease-out;
+  cursor: pointer;
+
+  & > span {
+    color: #64ffda;
+  }
+
+  &:hover {
+    color: #64ffda;
+    transition: 0.4s all ease-out;
+  }
+}
+
+.stickyNavLink {
+  color: #a7a7a7;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.4s all ease-out;
+  font-family: "Fira Code", monospace;
+  cursor: pointer;
+
+  &:hover {
+    color: #64ffda;
+    transition: 0.4s all ease-out;
+  }
+}
+
+.stickyNavActive {
+  color: #64ffda;
 }

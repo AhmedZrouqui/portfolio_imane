@@ -34,9 +34,12 @@ function Header() {
             text-transform: uppercase;
         }
     `
+    const HeaderWrapper = styled.div`
+        width: 100vw;
+        height: 8vh;
+    `
 
     const HeaderSection = styled.section`
-        padding: 1rem 0;
         display : flex;
     `
 
@@ -54,23 +57,27 @@ function Header() {
     `
 
     return (
-        <HeaderSection>
-            <Logo>
-                <h3>Imane</h3>
-            </Logo>
+        <HeaderWrapper>
+            <Container>
+                <HeaderSection>
+                    <Logo>
+                        <h3>Imane</h3>
+                    </Logo>
 
-            <Nav isOpen={isOpen} setIsOpen = {setIsOpen}>
-                {displayNavigation()}
-            </Nav>
+                    <Nav isOpen={isOpen} setIsOpen = {setIsOpen}>
+                        {displayNavigation()}
+                    </Nav>
 
-            <Button padding="10px 1rem">
-                Resume
-            </Button>
-            <IconWrapper onClick={() => setIsOpen(!isOpen)}>
-                {!isOpen && <BiMenuAltRight />}
-                {isOpen && <BiRightArrowAlt />}
-            </IconWrapper>
-        </HeaderSection>
+                    <Button padding="10px 1rem" hide={true}>
+                        Resume
+                    </Button>
+                    <IconWrapper onClick={() => setIsOpen(!isOpen)}>
+                        {!isOpen && <BiMenuAltRight />}
+                        {isOpen && <BiRightArrowAlt />}
+                    </IconWrapper>
+                </HeaderSection>
+            </Container>
+        </HeaderWrapper>
     )
 }
 

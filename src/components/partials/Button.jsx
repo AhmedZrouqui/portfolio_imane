@@ -12,6 +12,7 @@ export const Button = styled.button`
         font-family: 'Fira Code', monospace;
         transition: 0.4s all ease-out;
 
+
         &:hover{
             background: rgba(100, 255, 218, 0.2);
             transition: 0.4s all ease-out;
@@ -19,7 +20,7 @@ export const Button = styled.button`
 
 
         @media screen and (max-width:768px){
-            display: none;
+            display: ${(props) => props.hide ? "none" : "block"};
         }
         
     `

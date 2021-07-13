@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 
-export const Social = styled.ul`
+export const Navigation = styled.ul`
     position: fixed;
     list-style: none;
     bottom: 90px;
-    left: 2.5%;
+    left: calc(100% - 2.5%);
     transform: translateX(-50%);
 
     &::after {
@@ -24,20 +24,7 @@ export const Social = styled.ul`
 `
 
 
-export const SocialItem = styled.li`
+export const StickyNav = styled.li`
     padding: .6rem 0;
     
-`
-
-export const SocialLink = styled.a`
-    color: #a7a7a7;
-    font-size: 1.2rem;  
-    cursor: pointer;
-    transition: .4s all ease-out;
-    
-    &:hover{
-        color: #64FFDA;
-        transition: .4s all ease-out;
-    }
-
 `

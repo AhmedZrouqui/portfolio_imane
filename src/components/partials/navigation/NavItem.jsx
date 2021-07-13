@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'react-scroll'
 
 function NavItem({ children, href }) {
 
@@ -11,29 +12,15 @@ function NavItem({ children, href }) {
         }
 
     `
-
-    const NavLink = styled.a`
-        text-decoration: none;
-        text-transform: capitalize;
-        font-family: 'Fira Code', monospace;
-        color: #f3f3f3;
-        transition: .4s all ease-out;
-
-        & > span{
-            color: #64FFDA;
-        }
-
-        &:hover{
-            color: #64FFDA;
-            transition: .4s all ease-out;
-        }
-    `
-
     return (
         <NavItem>
-            <NavLink href={href}>
+            <Link className="navLink" to={href}
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}>
                 {children}
-            </NavLink>
+            </Link>
         </NavItem>
     )
 }
