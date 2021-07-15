@@ -6,6 +6,6 @@ export const Container = styled.div`
     margin: 0 auto;
     padding: 1.2rem 0;
     position: relative;
-    height: 100vh;
+    height: auto;
     display: ${(props) => props.display};
 `

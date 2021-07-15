@@ -10,7 +10,6 @@ function Footer() {
     const FooterContainer = styled.section`
         width: 900px;
         max-width: 900px;
-
         font-size: clamp(0.6rem, 4vw, 1rem);
         color: #a7a7a7;
 

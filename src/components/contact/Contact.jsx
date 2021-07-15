@@ -53,7 +53,7 @@ function Contact() {
     
     return (
         <>
-            <Wrapper height="60vh">
+            <Wrapper height="60vh" minHeight={true}>
                 <ContactWrapper id="contact" data-scroll-section>
                     <ContactTitle>
                         <span>
