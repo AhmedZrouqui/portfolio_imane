@@ -10,8 +10,7 @@ function Introduction() {
     const { scroll } = useLocomotiveScroll()
 
     const IntroductionContainer = styled.section`
-        height: 60%;
-        max-height: 648px;
+        height: auto;
         
     `
 
@@ -22,7 +21,7 @@ function Introduction() {
     `
 
     const CustomH1 = styled.h1`
-        font-size: clamp(2.5rem, 7vw, 4.8rem);
+        font-size: clamp(2.5rem, 5vw, 4.8rem);
         color: ${(props) => props.fontColor};
         line-height: 1.3;
     `

@@ -17,4 +17,8 @@ export const Wrapper = styled.div`
         width: 100%;
         height: ${(props) => props.mobilePlus ? "160vh" : "auto"};
     }
+
+    @media screen and (max-width: 1440px){
+        margin-bottom: ${(props) => props.noMargin ? "" : "4rem"};
+    }
 `

@@ -21,7 +21,7 @@ function Footer() {
 
     return (
         <>
-            <Wrapper height="auto">
+            <Wrapper height="auto" noMargin={true}>
                 <FooterContainer data-scroll-section>
                     Designed by Brittany Chiang, Built by Ahmed Zrouqui.
                 </FooterContainer>
