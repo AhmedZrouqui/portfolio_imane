@@ -67,3 +67,28 @@ body {
 .stickyNavActive {
   color: #64ffda;
 }
+
+.preloader {
+  position: fixed;
+  inset: 0;
+  background: #0a192f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h2 {
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #a7a7a7;
+  }
+
+  h4 {
+    font-weight: 300;
+    font-size: clamp(0.8rem, 4vw, 1.2rem);
+    font-family: "Fira Code", monospace;
+    color: #a7a7a7;
+    font-style: italic;
+  }
+}

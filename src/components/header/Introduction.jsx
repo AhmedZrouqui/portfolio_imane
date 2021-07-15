@@ -59,7 +59,7 @@ function Introduction() {
 
                     <IntroductionText data-scroll>
                         I'm a Morocco-based interior and graphic designer who specialiezes in building (and occasionally designing) exceptional 3D stuff.
-                        Currently, I'm an interior design student at <ColoredText>Medrassa</ColoredText> (last year).
+                        Currently, I'm an interior design student at <ColoredText>ESBAC Morocco</ColoredText>.
                     </IntroductionText>
 
                     <Button padding="1rem 2rem">

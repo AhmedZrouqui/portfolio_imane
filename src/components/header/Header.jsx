@@ -15,7 +15,7 @@ function Header() {
 
     const displayNavigation = () => {
         return navigation.map((item, index) =>
-            <NavItem href={item.link}>
+            <NavItem href={item.link} isOpen={isOpen} setIsOpen={setIsOpen}>
                 <span>0{item.id}.</span> {item.title}
             </NavItem>
         )

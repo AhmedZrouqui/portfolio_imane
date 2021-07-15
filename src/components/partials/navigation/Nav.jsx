@@ -36,7 +36,7 @@ function Nav({ children, isOpen, setIsOpen}) {
     `
     return (
         <Navigation>
-            <NavList isOpen={isOpen}>
+            <NavList isOpen={isOpen} setIsOpen={setIsOpen}>
                 {children}
             </NavList>
         </Navigation>

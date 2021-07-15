@@ -12,11 +12,39 @@ import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
 import { Link, animateScroll as scroll } from "react-scroll";
 import { Navigation, StickyNav } from "./components/sticky/Navigation";
-import { LocomotiveScrollProvider } from "react-locomotive-scroll";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
+
+import { css } from "@emotion/react";
+import PropagateLoader from "react-spinners/PropagateLoader";
 
 function App() {
-  const containerRef = useRef(null);
+  let containerRef = useRef(null);
+  let id = useRef(null);
+
+  const loaderStyle = css`
+    display: block;
+    margin: 0 auto;
+    color: #64ffda;
+    margin-top: 3rem;
+  `;
+
+  const [preloader, setPreloader] = useState(true);
+  const [timer, setTimer] = useState(4);
+
+  const clear = () => {
+    window.clearInterval(id.current);
+    setPreloader(false);
+  };
+
+  useEffect(() => {
+    id.current = window.setInterval(() => {
+      setTimer((timer) => timer - 1);
+    }, 1000);
+  }, []);
+
+  useEffect(() => {
+    if (timer === 0) clear();
+  }, [timer]);
 
   const displaySocial = () => {
     return _social.map((item, index) => (
@@ -46,17 +74,32 @@ function App() {
 
   return (
     <>
-      <Header />
-      <Container display="block" ref={(el) => (el = containerRef)}>
-        <Social>{displaySocial()}</Social>
-        <Navigation>{displayNavigation()}</Navigation>
-        <Introduction />
-        <About />
-        <Experiences />
-        <Works />
-        <Contact />
-        <Footer />
-      </Container>
+      {preloader ? (
+        <div className="preloader">
+          <h2>Imane Sihi</h2>
+          <h4>Interior Designer</h4>
+          <PropagateLoader
+            css={loaderStyle}
+            loading={true}
+            size={10}
+            color={"#64ffda"}
+          />
+        </div>
+      ) : (
+        <>
+          <Header />
+          <Container display="block" ref={(el) => (el = containerRef)}>
+            <Social>{displaySocial()}</Social>
+            <Navigation>{displayNavigation()}</Navigation>
+            <Introduction />
+            <About />
+            <Experiences />
+            <Works />
+            <Contact />
+            <Footer />
+          </Container>
+        </>
+      )}
     </>
   );
 }
