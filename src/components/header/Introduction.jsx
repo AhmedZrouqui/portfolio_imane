@@ -22,10 +22,9 @@ function Introduction() {
     `
 
     const CustomH1 = styled.h1`
-        font-size: clamp(2.5rem, 8vw, 5rem);
+        font-size: clamp(2.5rem, 7vw, 4.8rem);
         color: ${(props) => props.fontColor};
-        line-height: 4rem;
-        padding: 1rem 0;
+        line-height: 1.3;
     `
 
     const IntroductionText = styled.p`
